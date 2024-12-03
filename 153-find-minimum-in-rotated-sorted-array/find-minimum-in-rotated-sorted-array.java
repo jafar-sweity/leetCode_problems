@@ -1,15 +1,26 @@
 class Solution {
     public int findMin(int[] nums) {
-        int min =Integer.MAX_VALUE;
+        int left =0;
+        int right= nums.length -1 ;
 
-        for (int i =0 ; i<nums.length ;i++)
+    while (left < right)
+    {
+        int mid = (left +right ) / 2;
+
+
+        if (nums[mid] <= nums[right] )
         {
-            if(nums[i]<min)
-            {
-                min =nums[i];
-            }
+         right = mid;
+ 
+        } 
+        else {
+            left = mid +1;
         }
-        return min ; 
+
+
+
+    } 
+    return nums[left];
         
     }
 }
