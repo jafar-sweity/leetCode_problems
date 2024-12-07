@@ -8,6 +8,7 @@ class Solution {
         // m i s s i
         // i s s 
         // n= 0 1 2 
+        //
         
         for (int i=0; i<haystack.length();i++)
         {
@@ -20,10 +21,9 @@ class Solution {
             }
             
             else {
-                if (n > 0) {
-                    i = i - n;                 }
+                
+            i = i - n; 
             n=0;      
-            i=i-n; 
             
             }
         }
